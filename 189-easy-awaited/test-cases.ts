@@ -1,5 +1,6 @@
 import { Equal, Expect } from '@type-challenges/utils'
 
+type Awaited<T extends Promise<any>> = T extends Promise<infer P> ? P : never
 type X = Promise<string>
 type Y = Promise<{ field: number }>
 
